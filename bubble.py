@@ -41,6 +41,14 @@ def update_animation_hover_template(fig):
     '''
 
     # TODO : Set the hover template
+    hovertempl=hover_template.get_bubble_hover_template()
+    
+    fig.update_traces(hovertemplate = hovertempl)
+    
+    for frame in fig.frames:
+        for continent in frame["data"]:
+            continent["hovertemplate"]=hovertempl
+    
     return None
 
 
@@ -55,7 +63,7 @@ def update_animation_menu(fig):
             The updated figure
     '''
     # TODO : Update animation menu
-    return None
+    return fig
 
 
 def update_axes_labels(fig):
