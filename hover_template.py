@@ -5,8 +5,7 @@
 
 def get_bubble_hover_template():
     '''
-        Sets the template for the hover tooltips.
-        
+        Sets the template for the hover tooltips. 
         Contains four labels, followed by their corresponding
         value and units where appropriate, separated by a
         colon : country, population, GDP and CO2 emissions.
@@ -17,8 +16,5 @@ def get_bubble_hover_template():
             The content of the tooltip
     '''
     # TODO : Generate tooltip
-    
-    hovertemp='<b>Country</b> : %{hovertext} <br><b>Population</b> : %{customdata[0]} <br><b>GDP</b> :  %{x:,.2f} $ (USD)<br><b>CO2 emissions</b> :  %{y} metric tonnes <extra></extra>'
-
-
+    hovertemp = '<b>Country</b> : %{hovertext} <br><b>Population</b> : %{customdata[0]} <br><b>GDP</b> :  %{x:,.2f} $ (USD)<br><b>CO2 emissions</b> :  %{y} metric tonnes <extra></extra>'
     return hovertemp
