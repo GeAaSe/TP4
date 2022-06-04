@@ -30,6 +30,7 @@ def get_plot(my_df, gdp_range, co2_range):
                      animation_group="Country Name", size='Population',
                      color="Continent", log_x=True, log_y=True, size_max=30,
                      range_x=gdp_range, range_y=co2_range)
+    fig.update_traces(marker_sizemin=5)
     return fig
 
 
@@ -101,7 +102,8 @@ def update_axes_labels(fig):
             The updated figure
     '''
     # TODO : Update labels
-    fig.update_layout(xaxis_title="GDP per capita ($ USD)", yaxis_title="CO2 emission per capita (metric tonnes)")
+    fig.update_layout(xaxis_title="GDP per capita ($ USD)",
+                      yaxis_title="CO2 emission per capita (metric tonnes)")
     return fig
 
 
