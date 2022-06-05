@@ -22,7 +22,6 @@ import bubble
 
 app = dash.Dash(__name__)
 app.title = 'TP4 | INF8808'
-
 with open('../src/assets/data/countriesData.json') as data_file:
     data = json.load(data_file)
 
